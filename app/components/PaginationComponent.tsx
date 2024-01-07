@@ -19,6 +19,44 @@ const PaginationComponent = ({ itemCount, pageSize, currentPage }: Props) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  const displayPageCount = 3;
+  const generatePaginationLinks = () => {
+    const paginationLinks = [];
+    const leftEllipsis = currentPage > 2;
+    const rightEllipsis = currentPage < pageCount - 1;
+
+    for (let i = 1; i <= pageCount; i++) {
+      if (
+        i === 1 ||
+        i === pageCount ||
+        (i >= currentPage - 1 && i <= currentPage + 1)
+      ) {
+        paginationLinks.push(
+          <PaginationLink
+            key={i}
+            onClick={() => changePage(i)}
+            isActive={currentPage === i}
+          >
+            {i}
+          </PaginationLink>
+        );
+      }
+    }
+
+    if (leftEllipsis) {
+      paginationLinks.splice(1, 0, <PaginationEllipsis key="left" />);
+    }
+    if (rightEllipsis) {
+      paginationLinks.splice(
+        paginationLinks.length - 1,
+        0,
+        <PaginationEllipsis key="right" />
+      );
+    }
+
+    return paginationLinks;
+  };
+
   const pageCount = Math.ceil(itemCount / pageSize);
   if (pageCount <= 1) return null;
 
@@ -30,36 +68,24 @@ const PaginationComponent = ({ itemCount, pageSize, currentPage }: Props) => {
   return (
     <Pagination>
       <PaginationContent className=" *:cursor-pointer">
-        <Button variant="ghost" disabled={currentPage <= 1} onClick={() => changePage(currentPage - 1)} className="group">
-          <ChevronLeft className="group-hover:-translate-x-1 transition-all duration-300 delay-150" />  Previous
+        <Button
+          variant="ghost"
+          disabled={currentPage <= 1}
+          onClick={() => changePage(currentPage - 1)}
+          className="group"
+        >
+          <ChevronLeft className="group-hover:-translate-x-1 transition-all duration-300 delay-150" />{" "}
+          Previous
         </Button>
-        <PaginationLink
-          onClick={() => changePage(1)}
-          isActive={currentPage === 1}
+        {generatePaginationLinks()}
+        <Button
+          variant="ghost"
+          disabled={currentPage === pageCount}
+          onClick={() => changePage(currentPage + 1)}
+          className="group"
         >
-          1
-        </PaginationLink>
-        <PaginationLink
-          onClick={() => changePage(2)}
-          isActive={currentPage === 2}
-        >
-          2
-        </PaginationLink>
-        <PaginationLink
-          onClick={() => changePage(3)}
-          isActive={currentPage === 3}
-        >
-          3
-        </PaginationLink>
-        <PaginationEllipsis />
-        <PaginationLink
-          onClick={() => changePage(pageCount)}
-          isActive={currentPage === pageCount}
-        >
-          {pageCount}
-        </PaginationLink>
-        <Button variant="ghost" disabled={currentPage === pageCount} onClick={() => changePage(currentPage + 1)} className="group">
-          Next <ChevronRight className="group-hover:translate-x-1 transition-all duration-300 delay-150"/>
+          Next{" "}
+          <ChevronRight className="group-hover:translate-x-1 transition-all duration-300 delay-150" />
         </Button>
       </PaginationContent>
     </Pagination>
