@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.JS Pagination Using PostgreSQL and ShadCN UI
 
-## Getting Started
+This Project is hosted on vercel : [Pagination](https://next-js-pagination.vercel.app/)
 
-First, run the development server:
+## :star: Give A Star
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+You can also give this repository a star to show more people and they can use this repository.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏠 Built With:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[![My Skills](https://skillicons.dev/icons?i=react,nextjs,tailwind,emotion,postgres,prisma,vercel,vscode,linux)](https://skillicons.dev)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠 Skills
 
-## Learn More
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,postgres,git,github)](https://skillicons.dev)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🙋‍♂️ Connect With Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[<img src="https://skillicons.dev/icons?i=github" />](https://github.com/omunite215)&nbsp;
+[<img src="https://skillicons.dev/icons?i=linkedin" />](https://www.linkedin.com/in/om-patel-401068143/)&nbsp;
+[<img src="https://skillicons.dev/icons?i=instagram" />](https://www.instagram.com/_21omp/)&nbsp;
+[<img src="https://skillicons.dev/icons?i=devto" />](https://portfoliobyom.netlify.app/)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗒️ Authors
+- Om Patel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="left">
+  <a href="https://skillicons.dev">
+    <a href="https://github.com/omunite215">
+      <img src="https://skillicons.dev/icons?i=github" />
+    </a>
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://github.com/omunite215/Project_MERN-Dashboard/assets/78680563/6a4b6fef-216b-4442-a621-8878405a1aa9" alt="Om's Logo Image"/>
+</p>
+
+

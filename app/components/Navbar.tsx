@@ -1,6 +1,6 @@
 import { BookOpenIcon } from "lucide-react";
-import { ModeToggle } from "./ModeToggle";
 import Link from "next/link";
+import { ModeToggle } from "./ModeToggle";
 
 const Navbar = () => {
   return (

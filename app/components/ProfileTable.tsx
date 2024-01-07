@@ -18,7 +18,7 @@ type Props = {
   profiles: Profile[];
 };
 
-const columns: {
+export const columns: {
   label: string;
   className?: string;
 }[] = [
@@ -34,7 +34,7 @@ const columns: {
     className: "hidden md:table-cell",
   },
   {
-    label: "Emplyoment Status",
+    label: "Employment Status",
   },
 ];
 
@@ -54,8 +54,12 @@ const ProfileTable = ({ profiles }: Props) => {
         {profiles.map((profile) => (
           <TableRow key={profile.id}>
             <TableCell className="font-medium">{profile.name}</TableCell>
-            <TableCell className="hidden md:table-cell">{profile.email}</TableCell>
-            <TableCell className="hidden md:table-cell">{profile.domain}</TableCell>
+            <TableCell className="hidden md:table-cell">
+              {profile.email}
+            </TableCell>
+            <TableCell className="hidden md:table-cell">
+              {profile.domain}
+            </TableCell>
             <TableCell>
               <EmploymentStatus status={profile.employed} />
             </TableCell>
